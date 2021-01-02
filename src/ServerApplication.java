@@ -1,4 +1,5 @@
 import jdk.nashorn.internal.objects.NativeUint8Array;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -23,9 +24,7 @@ public class ServerApplication {
         ConnectionProxy connection = null;
         InputStream is = null;
         OutputStream os = null;
-
-        while(true)
-        {
+        while (true) {
             try {
                 socket = server.accept();
                 is = socket.getInputStream();
@@ -38,9 +37,6 @@ public class ServerApplication {
                 connection.start();
 
             } catch (IOException e) {
-                System.out.println(e);
-            } finally {
-
             }
         }
     }
