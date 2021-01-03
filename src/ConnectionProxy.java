@@ -63,7 +63,6 @@ public class ConnectionProxy extends Thread implements StringConsumer, StringPro
             if (socket != null)
                 socket.close();
 
-
         } catch (IOException e) {
             e.printStackTrace();
         }
